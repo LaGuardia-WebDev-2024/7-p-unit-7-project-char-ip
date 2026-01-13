@@ -4,15 +4,66 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-
+var StripeY1 = 100
+var StripeY2 = 100
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
  
   background(255,255,255,0);
   
+    fill(255,255,255);
+    stroke(255,255,255)
+    rect(110,0,90,400);
+
+    //red
+    stroke(255,0,0);
+    strokeWeight(40);
+    line(100,StripeY1 - 200,200,StripeY2 - 100);
+    line(100,StripeY1      ,200,StripeY2 + 100);
+    line(100,StripeY1 + 200,200,StripeY2 + 300);
+    line(100,StripeY1 + 400,200,StripeY2 + 500);
+    line(100,StripeY1 + 600,200,StripeY2 + 700);
+
+    //blue
+    stroke(0,0,255);
+    strokeWeight(40);
+    line(100,StripeY1 - 100,200,StripeY2);
+    line(100,StripeY1 + 100,200,StripeY2 + 200);
+    line(100,StripeY1 + 300,200,StripeY2 + 400);
+    line(100,StripeY1 + 500,200,StripeY2 + 600);
+    line(100,StripeY1 + 700,200,StripeY2 + 800);
+
+    StripeY1 -= 1
+    StripeY2 -= 1
+
+    if (StripeY1 == -500){
+        StripeY1 = 100
+    }
+    if (StripeY2 == -500){
+        StripeY2 = 100
+    }
 
 
+    //technically bg
+    stroke(0,0,0);
+    strokeWeight(2);
+    fill(228, 182, 242)
+    rect(-10,-10,120,500);
+    rect(190,-10,2000,500);
+
+    stroke(228, 182, 242);
+    rect(100,0,100,50);
+    rect(100,350,100,50);
+
+    //pole metal aprts
+    stroke(0,0,0);
+    fill(74, 74, 74);
+    rect(105,10,90,40);
+    rect(100,40,100,20);
+
+    rect(105,310,90,40);
+    rect(100,300,100,20);
 
 
 
