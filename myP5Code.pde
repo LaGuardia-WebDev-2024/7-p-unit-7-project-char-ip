@@ -6,6 +6,8 @@ void setup() {
 //🎯Variable Declarations Go Here
 var StripeY1 = 100
 var StripeY2 = 100
+var CloudX = 0
+let w = color(255,255,255);
 
 //🟢Draw Procedure - Runs on Repeat
 draw = function(){
@@ -45,14 +47,28 @@ draw = function(){
     }
 
 
+    //clouds?
+    stroke(w);
+    fill(w);
+    ellipse(CloudX + 400,50,140,100);
+    ellipse(CloudX + 320,80,80,80);
+    ellipse(CloudX + 500,70,60,60);
+
+    CloudX += 0.05
+
+    if (CloudX == 400) {
+        CloudX = -70
+    }
+
+
     //technically bg
     stroke(0,0,0);
     strokeWeight(2);
-    fill(228, 182, 242)
+    fill(125, 50, 36)
     rect(-10,-10,120,500);
-    rect(190,-10,2000,500);
+    rect(190,-10,100,500);
 
-    stroke(228, 182, 242);
+    stroke(125, 50, 36);
     rect(100,0,100,50);
     rect(100,350,100,50);
 
@@ -62,9 +78,10 @@ draw = function(){
     rect(105,10,90,40);
     rect(100,40,100,20);
 
+    triangle(150,30,130,50,170,50)
+
     rect(105,310,90,40);
     rect(100,300,100,20);
-
 
 
   //Show x y values when mousepressed
